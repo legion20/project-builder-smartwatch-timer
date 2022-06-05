@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch-ui</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <section class="left">
+            <div class="text">
+                <h1>SmartWatch</h1>
+            </div>
+        </section>
+        <section class="right">
+            <div class="clock">
+                <h4 id="toptime"></h4>
+                <div class="centertime">
+                    <h1 id="middletime"></h1>
+                    <h5 id="daydisplay"></h5>
+                </div>
+                <div id="sms" class="sms" style="display: none;">
+                    <div id="list">
+                        <p onclick="select(1)">Java</p>
+                        <p onclick="select(2)">CSS</p>
+                        <p onclick="select(3)">HTML</p>
+                        <p onclick="select(4)">JavaScript</p>
+                    </div>
+                    <p id="showMsg"></p>
+                </div>
+                <div id="timer" class="timer" style="display: none;">
+                    <h1 class="runningTime" id="runningTime">00:00:00</h1>
+                    <h3 class="pausedTime" id="pausedTime">00:00:00</h3>
+                    <div class="timerBtns">
+                        <button onclick="reset()"><i class="fas fa-redo"></i></button>
+                        <button onclick="start()"><i class="fas fa-play"></i></button>
+                        <button onclick="pause()"><i class="fas fa-pause"></i></button>
+                        <button onclick="stopTimer()">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image">
+                    <div><button onclick="sms()" style="background-color: black;"><img class="faa"
+                                src="bubble-chat.png"></img></button></div>
+                    <div><button style="background-color: black;"><img class="faa"
+                                src="musical-note.png"></img></button></div>
+                    <div><button onclick="timer()" style="background-color: black;"><img class="faa" src="clock.png"></img></button></div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>
